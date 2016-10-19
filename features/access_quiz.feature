@@ -21,3 +21,10 @@ Feature: As a Team
     Then I should be on the quiz page for "Trivia"
     And I should see "Welcome to quiz: Trivia"
     And I should see "Welcome back team"
+
+
+  Scenario: Dealing with two windows
+    Given I am on the quiz "landing" page
+    And  I open a new window
+    And I am on the quiz page for "Trivia" within window "1"
+    Then I should have "2" active windows
